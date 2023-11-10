@@ -72,19 +72,52 @@ section div {
 }
 
 .center section div a {
+    position: relative;
     font-size: 14px;
     font-weight: 600;
-    color: #fff;
+    outline: none;
+    cursor: pointer;
+    background-color: #fff;
+    color: #000;
     text-decoration: none;
     text-transform: uppercase;
-    background-color: #ff1eff;
     padding: 12px 28px;
     border-radius: 50px;
-    transition: all .25s ease-in-out;
 }
 
 .center div a:hover {
-    background-color: #f500f5;
+    background: linear-gradient(90deg, #03a9f4, #f441a5, #ffeb3b, #03a9f4);
+    background-size: 400%;
+    z-index: 1;
+    animation: glow 8s linear infinite;
+}
+
+@keyframes glow {
+    0% {
+        background-position: 0%;
+    }
+    100% {
+        background-position: 400%;
+    }
+}
+
+.center div a:before {
+    content: '';
+    position: absolute;
+    background: inherit;
+    top: -5px;
+    right: -5px;
+    bottom: -5px;
+    left: -5px;
+    border-radius: 50px;
+    filter: blur(10px);
+    opacity: 0;
+    transition: opacity 0.5s;
+}
+
+.center div a:hover:before {
+    opacity: 1;
+    z-index: -1;
 }
 
 /* - - - - - - - Footer - - - - - - - - */
@@ -105,7 +138,7 @@ footer {
 }
 
 .font-awesome {
-    width: 40%;
+    width: 60%;
     text-align: left;
 }
 
@@ -124,7 +157,7 @@ footer .container p {
 }
 
 .author {
-    width: 60%;
+    width: 40%;
     text-align: right;
     line-height: 80px;
 }
