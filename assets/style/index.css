@@ -137,32 +137,51 @@ footer {
     align-items: center;
 }
 
-.font-awesome {
-    width: 60%;
-    text-align: left;
+.wrapper {
+    width: 100%;
+    text-align: center;
 }
 
-.font-awesome a {
-    color: #fff;
+.wrapper .button {
+    color: #000;
+    width: 40px;
+    height: 40px;
     text-decoration: none;
-    margin-right: 10px;
     display:inline-block;
+    margin: 0 5px;
+    cursor: pointer;
+    overflow: hidden;
+    background: #fff;
+    border-radius: 50px;
+    box-shadow: 0px 10px 10px rgba(1, 1, 1, 0.1);
+    transition: all 0.25s ease-in-out;
 }
 
-footer .container p {
-    text-align: right;
-    vertical-align: baseline;
+.wrapper .button:hover {
+    width: 200px;
+}
+
+.wrapper .button .icon {
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    border-radius: 50px;
+    text-align: center;
+    box-sizing: border-box;
+    line-height: 40px;
+}
+
+.wrapper .button .icon i {
+    font-size: 18px;
+    line-height: 40px;
+}
+
+.wrapper .button span {
     font-size: 16px;
-    color: #fff;
+    line-height: 40px;
+    margin-left: 10px;
 }
 
-.author {
-    width: 40%;
-    text-align: right;
-    line-height: 80px;
-}
-
-.font-awesome i {
+.wrapper i {
     font-size: 24px;
-    margin-right: 5px;
 }
