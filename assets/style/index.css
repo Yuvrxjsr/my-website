@@ -60,11 +60,11 @@ main {
 .center h2 {
     color: #fff;
     font-size: 50px;
-    height: 200px;
 }
 
 .center {
     height: 100%;
+    width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
